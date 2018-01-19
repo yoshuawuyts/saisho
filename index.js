@@ -4,6 +4,18 @@ var store = require('./stores/clicks')
 
 css('tachyons')
 
+css`
+  *::selection {
+    color: #000;
+    background: #fff;
+  }
+
+  *::-moz-selection {
+    color: #000;
+    background: #fff;
+  }
+`
+
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
   app.use(require('choo-devtools')())
