@@ -1,27 +1,40 @@
 var html = require('choo/html')
 
-var TITLE = '🚂🚋🚋'
+var data = [
+  'Learn Rust',
+  'Build a p2p video player for the browser',
+  'Make Choo more accessible',
+  'Explain service workers thoroughly',
+  'learn to deploy node services',
+  'Figure out how to do containers right',
+  'Start making my own logos',
+  'Make generative background music',
+  'Find patterns in data',
+  'Release a tutorial video every month',
+  'Build my own electron apps',
+  'Create a page for each project I embark on',
+  'Build my own keyboard',
+  'Create a plan on how to exercise',
+  'Make a habit out of planning trips',
+  'Help out in the neighbourhood',
+  'Make a good vegan hamburger',
+  'Make a binary container',
+  'Start keeping track of my websites',
+  'Learn how to create database backups',
+  'Budget money',
+  'Budget time'
+]
 
 module.exports = view
 
 function view (state, emit) {
-  if (state.title !== TITLE) emit(state.events.DOMTITLECHANGE, TITLE)
+  emit('DOMTitleChange', 'saisho')
 
   return html`
-    <body class="sans-serif">
-      <h1 class="f-headline pa3 pa4-ns">
-        Choo choo!
-      </h1>
-
-      <div class="ph3 ph4-ns">
-        <p>Current number of clicks: ${state.totalClicks}</p>
-
-        <button class="f5 dim br-pill ph3 pv2 mb2 dib white bg-hot-pink bn pointer" onclick=${handleClick}>Click Me!</button>
-      </div>
+    <body class="sans-serif bg-black white ttu">
+      <table class="ma5 f4">
+        ${data.map(data => html`<tr>${data}</tr>`)}
+      </table>
     </body>
   `
-
-  function handleClick () {
-    emit('clicks:add', 1)
-  }
 }
