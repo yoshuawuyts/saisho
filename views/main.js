@@ -22,7 +22,10 @@ var data = [
   'Start keeping track of my websites',
   'Learn how to create database backups',
   'Budget money',
-  'Budget time'
+  'Budget time',
+  'Exercise three times a week',
+  'Make content rescaling more fun',
+  'Make git auto commits, like mercurial'
 ]
 
 module.exports = view
