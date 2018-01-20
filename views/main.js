@@ -35,8 +35,8 @@ function view (state, emit) {
 
   return html`
     <body class="sans-serif bg-black white ttu">
-      <table class="ma5 f4">
-        ${data.map(data => html`<tr>${data}</tr>`)}
+      <ul class="ma5 f4 list pa0">
+        ${data.map(data => html`<li>${data}</li>`)}
       </table>
     </body>
   `
