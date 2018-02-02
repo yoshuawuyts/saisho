@@ -1,14 +1,9 @@
 {
-  "name": "calendar",
-  "short_name": "calendar",
-  "description": "A very cute app",
+  "name": "saisho",
+  "short_name": "saisho",
+  "description": "But first,",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffc0cb",
-  "theme_color": "#ffc0cb",
-  "icons": [{
-    "src": "/assets/icon.png",
-    "type": "image/png",
-    "sizes": "512x512"
-  }]
+  "background_color": "#000",
+  "theme_color": "#000"
 }
